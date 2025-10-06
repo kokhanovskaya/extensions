@@ -1,0 +1,190 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Noto", sans-serif;
+}
+html .dark {
+  background: linear-gradient(hsl(227, 75%, 14%), hsl(226, 25%, 17%));
+  color: hsl(0, 0%, 78%);
+}
+html .light {
+  background-color: hsl(226, 12%, 79%);
+  color: hsl(229, 18%, 12%);
+}
+body {
+  width: 80%;
+  justify-self: center;
+}
+
+.button {
+  border: 1px solid hsl(226, 12%, 79%);
+  border-radius: 20px;
+  padding: 10px 15px;
+  align-self: center;
+}
+.button:hover {
+  border: 1px solid hsl(0, 62%, 47%);
+  transition: all 0.3s ease;
+}
+.button.removed {
+  background-color: hsl(0, 62%, 47%);
+  border: 1px solid hsl(0, 62%, 47%);
+}
+.dark .button {
+  color: hsl(0, 0%, 78%);
+}
+.light .button {
+  color: hsl(225, 23%, 24%);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 0px 15px;
+}
+
+.dark .header {
+  background-color: hsl(225, 23%, 24%);
+}
+
+.light .header {
+  background-color: hsl(200, 60%, 99%);
+}
+.light .header__light-mode {
+  background-color: hsl(226, 12%, 79%);
+}
+.extensions-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extensions-list__buttons {
+  display: flex;
+  margin-left: 18px;
+  height: 80px;
+  justify-self: right;
+}
+
+.extensions-list__button {
+  margin-left: 18px;
+}
+.extensions-list__button:hover {
+  border: 1px solid hsl(226, 12%, 79%);
+}
+
+.dark .extensions-list__button {
+  background-color: hsl(226, 11%, 37%);
+}
+
+.light .extensions-list__button {
+  background-color: hsl(200, 60%, 99%);
+}
+
+.extensions-list__button.selected {
+  background-color: hsl(0, 62%, 47%);
+  border: 1px solid hsl(0, 62%, 47%);
+}
+
+.elements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.elements > div {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 10px;
+  justify-content: space-between;
+}
+.elements .removed {
+  display: none;
+}
+.dark .elements > div {
+  background-color: hsl(225, 23%, 24%);
+  border: 0.01px solid hsl(0, 0%, 78%);
+}
+.light .elements > div {
+  background-color: hsl(200, 60%, 99%);
+  border: 0.01px solid hsl(225, 23%, 24%);
+}
+
+.elements__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.content__info {
+  width: 60%;
+}
+.elements__title {
+  font-size: 17px;
+  margin: 0;
+}
+
+.dark .elements__title {
+  color: aliceblue;
+}
+.light .elements__title {
+  color: hsl(229, 18%, 12%);
+}
+.elements__info {
+  font-size: 10px;
+}
+.elements__picture {
+  width: 30px;
+}
+
+.elements__mode {
+  display: flex;
+  justify-content: space-between;
+}
+.button--remove {
+  font-size: 10px;
+  background-color: transparent;
+}
+.button--check {
+  padding: 0;
+  height: 15px;
+  width: 30px;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid hsl(226, 12%, 79%);
+  align-self: center;
+}
+.button--check.checked {
+  background-color: hsl(0, 62%, 47%);
+  border: 1px solid hsl(0, 62%, 47%);
+}
+.check--move {
+  display: block;
+  height: 100%;
+  width: 50%;
+  border-radius: 44%;
+  transition: transform 0.3s ease;
+}
+.check--move.checked {
+  transform: translateX(100%);
+}
+
+.dark .check--move {
+  background-color: white;
+}
+.light .check--move {
+  background-color: white;
+  border: solid 1px hsl(226, 12%, 79%);
+  box-sizing: border-box;
+}
